@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgentCortex — Embed</title>
+  <style>
+    /* Page reset + center */
+    html,body { height:100%; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:#f7f7f7; color:#111; }
+    .wrap { max-width:900px; margin:40px auto; padding:16px; box-sizing:border-box; }
+
+    /* Responsive iframe container (keeps 4:3 aspect ratio by default) */
+    .iframe-embed {
+      position:relative;
+      width:100%;
+      /* 420/576 ≈ 0.729 -> padding-bottom = height/width * 100% = 72.9% */
+      padding-bottom:72.9%;
+      background:#fff;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+    .iframe-embed iframe {
+      position:absolute;
+      top:0; left:0;
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+
+    /* Optional: small caption */
+    .caption { margin-top:10px; font-size:0.9rem; color:#555; text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 style="margin:0 0 12px 0;font-size:1.25rem;">AgentCortex Presentation</h1>
+
+    <div class="iframe-embed" aria-hidden="false">
+      <iframe
+        src="https://slides.com/agentcortex/agentcortex/embed"
+        title="AgentCortex"
+        scrolling="no"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p class="caption">
+      If the embed doesn't load, <a href="https://slides.com/agentcortex/agentcortex" target="_blank" rel="noopener">open the slides in a new tab</a>.
+    </p>
+  </div>
+</body>
+</html>
